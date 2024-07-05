@@ -1,0 +1,91 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/src/img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    overflow-x: hidden;
+
+}
+
+
+body .__movie-finder-container {
+    background: rgba(255, 0, 0, .1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    position: sticky;
+    top: 0;
+    min-width: 100vw;
+    z-index: 999;
+}
+
+body .__movie-finder h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.25rem;
+}
+
+body .__movie-finder form input[type="text"] {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    outline: none !important;
+}
+
+body .__movie-finder form input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+body .__movie-finder form input::placeholder {
+    color: #bbb;
+    /* Placeholder un poco más gris */
+}
+
+.__movie-finder-container .__movie-finder form button {
+    background-color: #00ffff !important;
+    color: #000 !important;
+    border: none;
+    cursor: pointer;
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+}
+
+.__movie-finder-container .__movie-finder form button:hover {
+    background-color: #00cccc !important;
+    color: #fff !important;
+}
+
+.container .row .col .__card {
+    background: rgba(255, 0, 0, 0.6);
+    border: none;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transform: scale(0.99);
+    transform-origin: center;
+}
+
+.container .row .col .__card a {
+    color: #00ffff;
+    cursor: pointer;
+}
+
+.container .row .col .__card a:hover {
+    color: #00cccc;
+}
+
+.__truncated-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
