@@ -1,4 +1,28 @@
 /* Estilos generales */
+/* Configuración de la barra de desplazamiento */
+/* Personaliza el scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    /* Ajusta el ancho del scrollbar */
+  }
+  
+  /* Cambia el color de fondo del track (la parte donde se mueve el scrollbar) */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    /* Fondo blanco */
+  }
+  
+  /* Cambia el color de la barra del scrollbar */
+  ::-webkit-scrollbar-thumb {
+    background-color: #212529;
+    /* Color negro */
+    border-radius: 5px;
+    /* Agrega bordes redondeados */
+    border: 3px solid white;
+    /* Padding de lado */
+  }
+  
+
 body {
     margin: 0;
     padding: 0;
@@ -30,6 +54,7 @@ body .__movie-finder h1 {
     font-weight: 700;
     font-style: normal;
     letter-spacing: 0.25rem;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5); 
 }
 
 body .__movie-finder form input[type="text"] {
