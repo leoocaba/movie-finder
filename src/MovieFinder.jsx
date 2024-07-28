@@ -2,15 +2,16 @@ import { useState } from "react";
 import MovieCard from "./MovieCard"; // Importa el nuevo componente
 
 export const MovieFinder = () => {
-  const URL_BASE = "https://api.themoviedb.org/3/search/movie";
-  const API_KEY = "aac6aa325cdfe2524fc6f058c4482964";
+  const API_URL = process.env.REACT_APP_API_URL;
+  const API_KEY = process.env.REACT_APP_API_KEY;
+
   const [search, setSearch] = useState("");
   const [movies, setMovies] = useState([]);
 
   const fetchMovies = async () => {
     try {
       const response = await fetch(
-        `${URL_BASE}?query=${search}&api_key=${API_KEY}`
+        `${API_URL}?query=${search}&api_key=${API_KEY}`
       );
       const data = await response.json();
       setMovies(data.results); // Asegúrate de acceder a `data.results`
