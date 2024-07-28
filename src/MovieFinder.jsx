@@ -11,7 +11,7 @@ export const MovieFinder = () => {
   const fetchMovies = async () => {
     try {
       const response = await fetch(
-        `${API_URL}?query=${search}&api_key=${API_KEY}`
+        `${API_URL}/search/movie?query=${search}&api_key=${API_KEY}`
       );
       const data = await response.json();
       setMovies(data.results); // Asegúrate de acceder a `data.results`
