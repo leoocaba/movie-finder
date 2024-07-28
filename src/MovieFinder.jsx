@@ -14,7 +14,7 @@ export const MovieFinder = () => {
         `${API_URL}/search/movie?query=${search}&api_key=${API_KEY}`
       );
       const data = await response.json();
-      setMovies(data.results); // Asegúrate de acceder a `data.results`
+      setMovies(data.results);
     } catch (error) {
       console.log("Ha ocurrido un error: ", error);
     }
